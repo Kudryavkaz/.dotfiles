@@ -1,3 +1,5 @@
 [user]
 	name = zhangfish
 	email = noumi_kudryavka@foxmail.com
+[http]
+	postBuffer = 524288000

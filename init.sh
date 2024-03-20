@@ -2,8 +2,6 @@
 
 path=$HOME/.dotfiles
 
-# git submodule update --init --recursive
-
 if [ -d $path ]; then
 
 	if [ ! -e "$HOME/.dotfiles_backup" ]; then
@@ -55,6 +53,7 @@ if [ -d $path ]; then
 	done
 fi
 
+git submodule update --init --recursive
 # if [ ! -h $HOME/.local/share/nvim ]; then
 # 	ln -s "$path/.local/share/nvim" "$HOME/.local/share/"
 #     echo "link $path/.local/share/nvim/ to $HOME/.local/share/nvim"
