@@ -1,0 +1,83 @@
+" "----插件----
+set surround
+set NERDTree
+set which-key
+set easymotion
+set notimeout
+
+"----基础设置----
+set clipboard=unnamedplus,unnamed
+set number
+set ignorecase
+set scrolloff=6
+set relativenumber
+set incsearch
+
+"----键位设置----
+let mapleader=" "
+
+" 便捷操作
+" Ctrl+A 全选
+nnoremap <C-a> ggVG
+" 下移选中文本
+vnoremap J :action MoveLineDown<CR>
+" 上移选中文本
+vnoremap K :action MoveLineUp<CR>
+" 高效移动
+nnoremap <C-j> 21j
+nnoremap <C-k> 21k
+nnoremap <C-u> 26k
+nnoremap <C-d> 26j
+" 可视模式下复制不覆盖剪贴板
+vnoremap p "_dP
+" 插入模式下到行首
+inoremap <C-h> <ESC>I
+" 插入模式下到行尾
+inoremap <C-l> <ESC>A
+
+" EasyMotion
+let g:WhichKeyDesc_easymotion="<leader><leader> which-key"
+nmap s <Plug>(easymotion-f)
+nmap S <Plug>(easymotion-F)
+
+" 窗口管理
+let g:WhichKeyDesc_windows_split_vertical="<leader>sv 垂直分割窗口"
+let g:WhichKeyDesc_windows_split_horizontal="<leader>sh 水平分割窗口"
+let g:WhichKeyDesc_windows_close_this="<leader>sc 关闭当前窗口"
+let g:WhichKeyDesc_windows_close_other="<leader>so 关闭其他窗口"
+nnoremap <leader>sv :vsp<CR>
+nnoremap <leader>sh :sp<CR>
+nnoremap <leader>sc <C-w>c
+nnoremap <leader>so <C-w>o
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
+" 终端操作
+let g:WhichKeyDesc_terminal="<leader>t 打开终端"
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+
+" 复制当前文件路径
+let g:WhichKeyDesc_path="<leader>pwd 复制当前文件路径"
+nnoremap <leader>pwd :!echo % <bar> wl-copy<CR>
+
+" Buffer操作
+nnoremap <C-h> :action PreviousTab<CR>
+nnoremap <C-l> :action NextTab<CR>
+nnoremap <C-w> :action CloseContent<CR>
+
+" 代码操作
+let g:WhichKeyDesc_code_format="<leader>f 格式化代码"
+nnoremap <leader>f :action ReformatCode<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap <leader>a :action Generate<CR>
+
+" 查找操作
+nnoremap <C-f> :action FindInPath<CR>
+nnoremap <C-p> :action GotoFile<CR>
+
+" Copilot
+nnoremap <leader>ce :action copilot.enableCopilot<CR>
+nnoremap <leader>cd :action copilot.disableCopilot<CR>

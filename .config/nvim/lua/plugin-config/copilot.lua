@@ -1,0 +1,2 @@
+-- vim.api.nvim_command("Copilot disable")
+-- vim.fn.execute("Copilot disable")
