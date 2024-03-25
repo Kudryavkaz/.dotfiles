@@ -12,6 +12,7 @@ set ignorecase
 set scrolloff=6
 set relativenumber
 set incsearch
+set mouse="a"
 
 "----键位设置----
 let mapleader=" "

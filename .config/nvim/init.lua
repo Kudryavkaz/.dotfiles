@@ -6,15 +6,15 @@ require("plugins")
 require("keybindings")
 -- 主题配置
 require("colorscheme")
--- -- 自动设置
+-- 自动设置
 require("autocmds")
--- -- 内置LSP
+-- 内置LSP
 require("lsp.setup")
--- -- 代码补全
+-- 代码补全
 require("cmp.setup")
--- -- 代码格式化
+-- 代码格式化
 require("format.setup")
--- -- debug
-require("dap.setup")
--- -- 运行代码
+-- 运行代码
 require("runcode")
+-- debug
+-- require("dap.setup")

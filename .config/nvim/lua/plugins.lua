@@ -86,10 +86,10 @@ require("lazy").setup({
 	-- typescript增强
 	{ "jose-elias-alvarez/nvim-lsp-ts-utils", dependencies = "nvim-lua/plenary.nvim" },
 	-- DAP
-	{ "mfussenegger/nvim-dap" },
-	{ "theHamsta/nvim-dap-virtual-text" },
-	{ "rcarriga/nvim-dap-ui" },
-	{ "mfussenegger/nvim-dap-python" },
+	-- { "mfussenegger/nvim-dap" },
+	-- { "theHamsta/nvim-dap-virtual-text" },
+	-- { "rcarriga/nvim-dap-ui" },
+	-- { "mfussenegger/nvim-dap-python" },
 })
 
 -- 加载插件
