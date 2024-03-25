@@ -30,3 +30,11 @@ fi
 # title
 export PS1="\[\e]0;\u@\h\a\]$PS1"
 export RPROMPT="%F{red}%(?..%?)%f"
+
+
+alias nv=nvim
+alias ls='ls --color=auto'
+alias ll='ls -lah --color=auto'
+alias grep='grep --color=auto'
+alias gs='git status'
+alias kssh='kitty +kitten ssh'
