@@ -47,6 +47,27 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.zsh/.fzf.zsh
 
+if [ -d "$HOME/utils" ]; then
+    for file in "$HOME/utils"/*; do
+        if [[ $file == *.sh ]]; then
+            source "$file"
+        fi
+    done
+fi
+
+# 设置man手册颜色
+man() {
+    export MANROFFOPT=-c
+    env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+        man "$@"
+}
+ 
 # 设置nvim为默认编辑器
 export EDITOR=nvim
 export VISUAL=nvim
@@ -57,9 +78,11 @@ bindkey -e
 source ~/.zsh/.zprofile
 
 # 别名
-alias nv=nvim
+alias vi='nvim'
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 alias grep='grep --color=auto'
 alias gs='git status'
 alias kssh='kitty +kitten ssh'
+alias tm='tmux'
+alias ag="$HOME/utils/ag.py"

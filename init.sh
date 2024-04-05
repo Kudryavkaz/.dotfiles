@@ -2,7 +2,7 @@
 
 path=$HOME/.dotfiles
 
-if [ -d $path ]; then
+if [ -d ${path} ]; then
 
 	if [ ! -e "$HOME/.dotfiles_backup" ]; then
 		mkdir "$HOME/.dotfiles_backup"

@@ -43,6 +43,7 @@ require("mason-lspconfig").setup({
 		"bashls",
 		"pyright",
 		"volar",
+        "dockerls",
 		-- -- Formatter
 		-- "shfmt",
 		-- "stylua",
@@ -69,6 +70,7 @@ local servers = {
 	bashls = require("lsp.config.bash"),
 	pyright = require("lsp.config.python"),
 	volar = require("lsp.config.vue"),
+    dockerls = require("lsp.config.docker")
 }
 
 for name, config in pairs(servers) do

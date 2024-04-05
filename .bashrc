@@ -13,8 +13,6 @@ PS1='[\u@\h \W]\$ '
 # show neofetch when konsole open
 # source ~/.config/neofetch/show_neofetch_start
 
-# enable fzf when use C-R
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # set cmd color
 if [ -n "$BASH_VERSION" ]; then
@@ -27,14 +25,29 @@ else
     fi
 fi
 
+
+
 # title
 export PS1="\[\e]0;\u@\h\a\]$PS1"
 export RPROMPT="%F{red}%(?..%?)%f"
 
+# 设置man手册颜色
+man() {
+    export MANROFFOPT=-c
+    env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+        man "$@"
+}
 
-alias nv=nvim
+alias vi='nvim'
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 alias grep='grep --color=auto'
 alias gs='git status'
 alias kssh='kitty +kitten ssh'
+alias tm='tmux'
