@@ -81,6 +81,7 @@ source ~/.zsh/.zprofile
 alias vi='nvim'
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
+alias less='less -R'
 alias grep='grep --color=auto'
 alias gs='git status'
 alias kssh='kitty +kitten ssh'
