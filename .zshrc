@@ -47,13 +47,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.zsh/.fzf.zsh
 
-if [ -d "$HOME/utils" ]; then
-    for file in "$HOME/utils"/*; do
-        if [[ $file == *.sh ]]; then
-            source "$file"
-        fi
-    done
-fi
 
 # 设置man手册颜色
 man() {
@@ -75,7 +68,13 @@ export VISUAL=nvim
 bindkey -e
 
 # 导入代理函数
-source ~/.zsh/.zprofile
+if [ -d "$HOME/utils" ]; then
+    for file in "$HOME/utils"/*; do
+        if [[ $file == *.sh ]]; then
+            source "$file"
+        fi
+    done
+fi
 
 # 别名
 alias vi='nvim'
@@ -86,4 +85,3 @@ alias grep='grep --color=auto'
 alias gs='git status'
 alias kssh='kitty +kitten ssh'
 alias tm='tmux'
-alias ag="$HOME/utils/ag.py"

@@ -44,9 +44,19 @@ man() {
         man "$@"
 }
 
+# 导入代理函数
+if [ -d "$HOME/utils" ]; then
+    for file in "$HOME/utils"/*; do
+        if [[ $file == *.sh ]]; then
+            source "$file"
+        fi
+    done
+fi
+
 alias vi='nvim'
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
+alias less='less -R'
 alias grep='grep --color=auto'
 alias gs='git status'
 alias kssh='kitty +kitten ssh'
