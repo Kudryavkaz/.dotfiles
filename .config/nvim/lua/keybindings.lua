@@ -8,7 +8,7 @@ local opt = { noremap = true, silent = true }
 
 -- 基本快捷键
 map("n", "<leader>a", "ggVG", opt)
-map({"n", "i", "v"}, "<F1>", "", opt)
+map({ "n", "i", "v" }, "<F1>", "", opt)
 -- 在浏览器中打开
 map("n", "<leader>ob", ":silent !xdg-open %<CR>", opt)
 -- 在vscode中打开
@@ -74,6 +74,15 @@ map("i", "<C-l>", "<ESC>A", opt)
 
 -- 复制当前文件路径
 map("n", "<leader>pwd", ":silent !echo %:p <Bar> wl-copy<CR>", opt)
+
+-- OSC52
+local status, osc52 = pcall(require, "osc52")
+if status then
+	map("n", "y", osc52.copy_operator, { expr = true })
+	map("n", "yy", "y_", { remap = true })
+	map("v", "y", osc52.copy_visual)
+end
+
 -- 插件快捷键
 local pluginKeys = {}
 -- LSP快捷键
@@ -120,13 +129,13 @@ pluginKeys.mapTsLSP = function(mapbuf)
 end
 
 -- 调试快捷键
-map("n", "<leader>dd", "<cmd>lua require'dap'.continue()<CR>", opt)
-map("n", "<leader>de", "<cmd>lua require'dap'.terminate() require'dapui'.close()<CR>", opt)
-map("n", "<leader>ds", "<cmd>lua require'dap'.step_over()<CR>", opt)
-map("n", "<leader>di", "<cmd>lua require'dap'.step_into()<CR>", opt)
-map("n", "<leader>do", "<cmd>lua require'dap'.step_out()<CR>", opt)
-map("n", "<leader>dt", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", opt)
-map("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<CR>", opt)
+-- map("n", "<leader>dd", "<cmd>lua require'dap'.continue()<CR>", opt)
+-- map("n", "<leader>de", "<cmd>lua require'dap'.terminate() require'dapui'.close()<CR>", opt)
+-- map("n", "<leader>ds", "<cmd>lua require'dap'.step_over()<CR>", opt)
+-- map("n", "<leader>di", "<cmd>lua require'dap'.step_into()<CR>", opt)
+-- map("n", "<leader>do", "<cmd>lua require'dap'.step_out()<CR>", opt)
+-- map("n", "<leader>dt", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", opt)
+-- map("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<CR>", opt)
 
 -- Copilot
 map("i", "<C-A>", 'copilot#Accept("\\<CR>")', {

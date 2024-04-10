@@ -85,6 +85,8 @@ require("lazy").setup({
 	{ "b0o/schemastore.nvim" },
 	-- typescript增强
 	{ "jose-elias-alvarez/nvim-lsp-ts-utils", dependencies = "nvim-lua/plenary.nvim" },
+    -- OSC支持
+    { "ojroques/nvim-osc52" },
 	-- DAP
 	-- { "mfussenegger/nvim-dap" },
 	-- { "theHamsta/nvim-dap-virtual-text" },
