@@ -65,6 +65,10 @@ man() {
 export EDITOR=nvim
 export VISUAL=nvim
 
+# abstract-machine
+export AM_HOME='/home/zhangfish/Coding/csdiy/nju-os/abstract-machine'
+export ARCH='native'
+
 bindkey -e
 
 # 导入代理函数
@@ -85,3 +89,6 @@ alias grep='grep --color=auto'
 alias gs='git status'
 alias kssh='kitty +kitten ssh'
 alias tm='tmux'
+alias open='xdg-open'
+
+# source /etc/profile

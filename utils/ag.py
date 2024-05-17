@@ -4,7 +4,6 @@ import os
 import time
 import signal
 import readline
-import tiktoken
 from openai import OpenAI
 
 # ---config---

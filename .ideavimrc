@@ -9,7 +9,7 @@ set notimeout
 set clipboard=unnamedplus,unnamed
 set number
 set ignorecase
-set scrolloff=9
+set scrolloff=5
 set relativenumber
 set incsearch
 set mouse="a"
@@ -19,7 +19,7 @@ let mapleader=" "
 
 " 便捷操作
 " Ctrl+A 全选
-nnoremap <C-a> ggVG
+nnoremap <leader>a ggVG
 " 下移选中文本
 vnoremap J :action MoveLineDown<CR>
 " 上移选中文本
@@ -59,6 +59,10 @@ nnoremap <A-l> <C-w>l
 let g:WhichKeyDesc_terminal="<leader>t 打开终端"
 nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
 
+" 注释
+nnoremap gc :action CommentByLineComment<CR>
+vnoremap gc :action CommentByLineComment<CR><ESC>
+
 " 复制当前文件路径
 let g:WhichKeyDesc_path="<leader>pwd 复制当前文件路径"
 nnoremap <leader>pwd :!echo % <bar> wl-copy<CR>
@@ -73,7 +77,7 @@ let g:WhichKeyDesc_code_format="<leader>f 格式化代码"
 nnoremap <leader>f :action ReformatCode<CR>
 nnoremap <leader>rn :action RenameElement<CR>
 nnoremap gd :action GotoDeclaration<CR>
-nnoremap <leader>a :action Generate<CR>
+" nnoremap <leader>a :action Generate<CR>
 
 " 查找操作
 nnoremap <C-f> :action FindInPath<CR>

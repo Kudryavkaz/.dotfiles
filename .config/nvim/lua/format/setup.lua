@@ -18,6 +18,8 @@ null_ls.setup({
 		formatting.stylua,
 		-- clangd - c/c++
 		formatting.clang_format,
+        -- google-java-format - java
+        -- formatting.google_java_format,
 		-- black - python
 		formatting.black.with({ extra_args = { "--fast" } }),
 		-- prettier - json/css/javascript/typescript/vue
