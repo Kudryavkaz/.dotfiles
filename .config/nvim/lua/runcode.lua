@@ -24,7 +24,8 @@ vim.api.nvim_create_autocmd("FileType", {
 			0,
 			"n",
 			"<leader>ov",
-			"<cmd>silent !code ~/Coding/C-workshop<CR><cmd>silent !code %<CR>",
+			-- "<cmd>silent !code ~/Coding/C-workshop<CR><cmd>silent !code %<CR>",
+			"<CMD>silent !code --file-uri /home/zhangfish/Coding/C-workshop/workspace/C-workshop.code-workspace<CR><CMD>silent !code %<CR>",
             opt
 		)
 	end,
