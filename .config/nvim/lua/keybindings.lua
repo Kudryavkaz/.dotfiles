@@ -258,6 +258,7 @@ map("n", "F", "gg=G<C-o>", opt)
 
 -- nvim-tree
 -- alt + m 键打开关闭tree
+map("n", "<A-m>", ":cd $PWD<CR> :NvimTreeToggle<CR>", opt)
 map("n", "<A-b>", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = {

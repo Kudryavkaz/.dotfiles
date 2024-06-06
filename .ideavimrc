@@ -14,6 +14,9 @@ set relativenumber
 set incsearch
 set mouse="a"
 
+"----缩进设置----
+set listchars=space:·,tab:··
+
 "----键位设置----
 let mapleader=" "
 

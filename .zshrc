@@ -92,3 +92,14 @@ alias tm='tmux'
 alias open='xdg-open'
 
 # source /etc/profile
+
+# my langsmith api key
+export LANGCHAIN_TRACING_V2=true
+export LANGCHAIN_API_KEY="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"
+export OPENAI_API_KEY="sk-ZRFk4ZTodEPmDuuc5ZOQAck8sNivoQwJ8W74jJI1LlIE78oZ"
+export OPENAI_API_BASE="https://api.chatanywhere.tech/v1"
+
+# Created by `pipx` on 2024-05-29 05:04:05
+export PATH="$PATH:/home/zhangfish/.local/bin"
+export GOBIN=${GOBIN:-$(go env GOPATH)/bin}
+

@@ -8,7 +8,8 @@ from openai import OpenAI
 
 # ---config---
 messages = [{"role": "system", "content": "You are an assistant."}]
-mode = "gpt-4-0125-preview"
+mode = "gpt-4o"
+# mode = "gpt-4-0125-preview"
 # mode = "gpt-3.5-turbo"
 # ------------
 
@@ -27,7 +28,8 @@ display_model = "\033[0;32m" + mode + "\033[0m"
 client = OpenAI(
     # api_key="sk-87PwpjJLwI0NPbQ8Rc5a3iNMfhtJXqiPVTLGmof54y40L9AC",  # gpt-3.5-turbo
     api_key="sk-ZRFk4ZTodEPmDuuc5ZOQAck8sNivoQwJ8W74jJI1LlIE78oZ",  # gpt-4
-    base_url="https://api.chatanywhere.tech/v1",
+    # api_key="sk-87PwpjJLwI0NPbQ8Rc5a3iNMfhtJXqiPVTLGmof54y40L9AC",
+    base_url="https://api.chatanywhere.tech",
 )
 
 def signal_handler(signal, frame):

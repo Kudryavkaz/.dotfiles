@@ -71,7 +71,8 @@ local servers = {
 	pyright = require("lsp.config.python"),
 	volar = require("lsp.config.vue"),
     dockerls = require("lsp.config.docker"),
-    jdtls = require("lsp.config.jdtls")
+    jdtls = require("lsp.config.jdtls"),
+    gopls = require("lsp.config.gopls")
 }
 
 for name, config in pairs(servers) do

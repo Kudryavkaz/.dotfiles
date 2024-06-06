@@ -15,6 +15,6 @@ require("cmp.setup")
 -- 代码格式化
 require("format.setup")
 -- 运行代码
-require("runcode")
+require("action")
 -- debug
 -- require("dap.setup")
