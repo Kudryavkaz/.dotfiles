@@ -20,7 +20,7 @@ proxy_check() {
 
 #---ask gpt---
 ag() {
-    env python "$HOME/utils/ag.py"
+    "$HOME/utils/ag"
 }
 #-------------
 

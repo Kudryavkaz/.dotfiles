@@ -1,2 +1,3 @@
 .zsh/.zsh_history
-# .local/share/nvim/telescope_history
+.wakatime.cfg
+.ag.yaml
