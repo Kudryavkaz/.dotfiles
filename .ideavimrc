@@ -21,6 +21,8 @@ set listchars=space:·,tab:··
 let mapleader=" "
 
 " 便捷操作
+" x删除不复制
+nnoremap x "_x
 " Ctrl+A 全选
 nnoremap <leader>a ggVG
 " 下移选中文本
@@ -73,7 +75,7 @@ nnoremap <leader>pwd :!echo % <bar> wl-copy<CR>
 " Buffer操作
 nnoremap <C-h> :action PreviousTab<CR>
 nnoremap <C-l> :action NextTab<CR>
-nnoremap <C-w> :action CloseContent<CR>
+nnoremap <C-A-w> :action CloseContent<CR>
 
 " 代码操作
 let g:WhichKeyDesc_code_format="<leader>f 格式化代码"
@@ -89,3 +91,4 @@ nnoremap <C-p> :action GotoFile<CR>
 " Copilot
 nnoremap <leader>ce :action copilot.enableCopilot<CR>
 nnoremap <leader>cd :action copilot.disableCopilot<CR>
+set ideajoin

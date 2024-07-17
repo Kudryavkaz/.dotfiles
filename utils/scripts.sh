@@ -14,13 +14,13 @@ proxy_off() {
 }
 
 proxy_check() {
-    curl cip.cc
+	curl cip.cc
 }
 #----------------
 
 #---ask gpt---
 ag() {
-    "$HOME/utils/ag"
+	"$HOME/utils/ag"
 }
 #-------------
 
@@ -33,13 +33,38 @@ mkcd() {
 
 #---unzip to folder---
 uzf() {
-    file=$1
-    folder=${file%.*}
-    unzip -q "$file" -d "$folder"
-    echo "unzip $file to $folder, enter to $folder? [y/n]\c"
-    read -r choice
-    if [ "$choice" = "y" ];then
-        cd "./$folder" || exit
-    fi
+	file=$1
+	folder=${file%.*}
+	unzip -q "$file" -d "$folder"
+	echo "unzip $file to $folder, enter to $folder? [y/n]\c"
+	read -r choice
+	if [ "$choice" = "y" ]; then
+		cd "./$folder" || exit
+	fi
 }
 #-----------
+
+#---source conda---
+# >>> conda initialize >>>
+source_conda() {
+# !! Contents within this block are managed by 'conda init' !!
+	__conda_setup="$('/opt/anaconda/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
+	if [ $? -eq 0 ]; then
+		eval "$__conda_setup"
+	else
+		if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
+			. "/opt/anaconda/etc/profile.d/conda.sh"
+		else
+			export PATH="/opt/anaconda/bin:$PATH"
+		fi
+	fi
+	unset __conda_setup
+# <<< conda initialize <<<
+}
+#-----------------
+
+#---source nvm---
+source_nvm() {
+    source /usr/share/nvm/init-nvm.sh
+}
+#---------------

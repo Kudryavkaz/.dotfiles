@@ -17,7 +17,7 @@ map("n", "<leader>ov", ":silent !code %<CR>", opt)
 -- 回到Dashboard
 map("n", "<leader>h", ":Dashboard<CR>", opt)
 -- windows 分屏快捷键
-map("n", "<leader>sv", ":vsp<CR>", opt)
+map("n", "<C-\\>", ":vsp<CR>", opt)
 map("n", "<leader>sh", ":sp<CR>", opt)
 -- 关闭当前
 map("n", "<leader>sc", "<C-w>c", opt)
@@ -74,6 +74,9 @@ map("i", "<C-l>", "<ESC>A", opt)
 
 -- 复制当前文件路径
 map("n", "<leader>pwd", ":silent !echo %:p <Bar> wl-copy<CR>", opt)
+
+-- x删除不复制
+map("n", "x", "\"_x", opt)
 
 -- OSC52
 local status, osc52 = pcall(require, "osc52")
@@ -221,7 +224,7 @@ map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 -- 关闭
 --"moll/vim-bbye"
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map("n", "<C-A-w>", ":Bdelete!<CR>", opt)
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)

@@ -3,3 +3,5 @@
 	email = noumi_kudryavka@foxmail.com
 [http]
 	postBuffer = 524288000
+[core]
+	autocrlf = input

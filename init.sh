@@ -14,7 +14,7 @@ if [ -d ${path} ]; then
 			echo link $name already exists
 			continue
 		fi
-		if [ -f "$entry" ] && [ "$entry" != "$path/.git" ] && [ "$entry" != "$path/.gitignore" ] && [ "$entry" != "$path/.gitmodules" ] && [ "$entry" != "$path/init.sh" ]; then
+		if [ -f "$entry" ] && [ "$entry" != "$path/.git" ] && [ "$entry" != "$path/.gitignore" ] && [ "$entry" != "$path/.gitmodules" ] && [ "$entry" != "$path/init.sh" ] && [ "$entry" != "README.md" ]; then
 			if [ -e "$HOME/$name" ]; then
 				echo "$HOME/$name" already exists, move it to .dotfiles_backup
 				mv -i "$HOME/$name" "$HOME/.dotfiles_backup/$name"

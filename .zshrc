@@ -90,6 +90,8 @@ alias gs='git status'
 alias kssh='kitty +kitten ssh'
 alias tm='tmux'
 alias open='xdg-open'
+alias gdb='gdb -q'
+alias nvi='kitty nvim &'
 
 # source /etc/profile
 

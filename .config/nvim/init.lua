@@ -16,5 +16,7 @@ require("cmp.setup")
 require("format.setup")
 -- 运行代码
 require("action")
--- debug
--- require("dap.setup")
+-- neovide
+if vim.g.neovide then
+    require("neovide")
+end

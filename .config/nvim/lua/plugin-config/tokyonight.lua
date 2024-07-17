@@ -4,10 +4,14 @@ if not status then
 	return
 end
 
+local flag = true
+if vim.g.neovide then
+    flag = false
+end
 tokyonight.setup({
 	style = "moon",
 	light_style = "day", -- The theme is used when the background is set to light
-	transparent = true, -- Enable this to disable setting the background color
+	transparent = flag, -- Enable this to disable setting the background color
 	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
 	styles = {
 		-- Style to be applied to different syntax groups
