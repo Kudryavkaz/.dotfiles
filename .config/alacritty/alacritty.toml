@@ -10,4 +10,4 @@ bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
 size = 16
 
 [window]
-opacity = 0.85
+opacity = 1.00

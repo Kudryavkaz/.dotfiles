@@ -36,10 +36,10 @@ uzf() {
 	file=$1
 	folder=${file%.*}
 	unzip -q "$file" -d "$folder"
-	echo "unzip $file to $folder, enter to $folder? [y/n]\c"
+	echo "unzip $file to $folder, enter to $folder? [Y/n]\c"
 	read -r choice
-	if [ "$choice" = "y" ]; then
-		cd "./$folder" || exit
+	if [ "$choice" != "n" ] && [ "$choice" != "N" ]; then
+		xdg-open "./$folder" || exit
 	fi
 }
 #-----------
@@ -47,7 +47,7 @@ uzf() {
 #---source conda---
 # >>> conda initialize >>>
 source_conda() {
-# !! Contents within this block are managed by 'conda init' !!
+	# !! Contents within this block are managed by 'conda init' !!
 	__conda_setup="$('/opt/anaconda/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
 	if [ $? -eq 0 ]; then
 		eval "$__conda_setup"
@@ -59,12 +59,12 @@ source_conda() {
 		fi
 	fi
 	unset __conda_setup
-# <<< conda initialize <<<
+	# <<< conda initialize <<<
 }
 #-----------------
 
 #---source nvm---
 source_nvm() {
-    source /usr/share/nvm/init-nvm.sh
+	source /usr/share/nvm/init-nvm.sh
 }
 #---------------

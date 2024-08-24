@@ -97,4 +97,3 @@ alias nvi='kitty nvim &'
 export PATH="$PATH:/home/zhangfish/.local/bin"
 export PATH="$PATH:/home/zhangfish/go/bin"
 export GOBIN=${GOBIN:-$(go env GOPATH)/bin}
-

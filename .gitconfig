@@ -5,3 +5,6 @@
 	postBuffer = 524288000
 [core]
 	autocrlf = input
+[safe]
+	directory = /home/zhangfish/Coding/tmp/RediSearch
+	directory = /tmp/makepkg/redisearch/src/redisearch

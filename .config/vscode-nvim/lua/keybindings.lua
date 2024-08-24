@@ -24,6 +24,8 @@ map("v", "K", ":move '<-2<CR>gv-gv", opt)
 -- 上下滚动浏览
 map("n", "<C-j>", "20j", opt)
 map("n", "<C-k>", "20k", opt)
+map("v", "<C-j>", "20j", opt)
+map("v", "<C-k>", "20k", opt)
 -- ctrl u / ctrl + d  只移动25行，默认移动半屏
 map("n", "<C-u>", "25k", opt)
 map("n", "<C-d>", "25j", opt)
