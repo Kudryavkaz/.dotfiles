@@ -37,6 +37,7 @@ require("lazy").setup({
 	{ "lukas-reineke/indent-blankline.nvim" },
 	-- which key
 	{ "folke/which-key.nvim" },
+    { "echasnovski/mini.icons" },
 	-- 消息栏
 	{ "rcarriga/nvim-notify" },
 	-- 括号补全
